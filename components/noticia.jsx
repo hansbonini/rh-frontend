@@ -5,7 +5,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { CommentCount } from "disqus-react";
 
 export default function Noticia({ item }) {
-  const identifier = item.slug.replaceAll("-", "_");
+  const identifier = item.slug.replace(/-/g, "_");
 
   return (
     <Card className="text-center mb-4">

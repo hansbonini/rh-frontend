@@ -119,7 +119,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const res = await fetch("https://romhackers.org/api/traducoes.json");
   const json = await res.json();
-  console.log(params.patch_author)
   const filtered = json.filter((item) => item.patch_author.includes(`${params.patch_author}`))
 
   return {
